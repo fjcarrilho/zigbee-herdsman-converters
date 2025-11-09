@@ -2768,6 +2768,10 @@ export const definitions: DefinitionWithExtend[] = [
             }),
             sonoffExtend.externalSwitchTriggerMode(),
         ],
+        exposes: [
+            e.binary('cover_inverted', ea.SET, true, false)
+                .withDescription('Inverts the cover direction (if this device is used for a cover)'),
+        ],
         ota: true,
         configure: async (device, coordinatorEndpoint) => {
             const endpoint = device.getEndpoint(1);
