@@ -2769,7 +2769,7 @@ export const definitions: DefinitionWithExtend[] = [
             sonoffExtend.externalSwitchTriggerMode(),
         ],
         exposes: [
-            e.binary('cover_inverted', ea.SET, true, false)
+            e.binary('cover_inverted', ea.STATE_SET, true, false)
                 .withDescription('Inverts the cover direction (if this device is used for a cover)'),
         ],
         ota: true,
