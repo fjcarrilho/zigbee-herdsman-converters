@@ -2772,6 +2772,12 @@ export const definitions: DefinitionWithExtend[] = [
             e.binary('cover_inverted', ea.STATE_SET, true, false)
                 .withDescription('Inverts the cover direction (if this device is used for a cover)'),
         ],
+        toZigbee: [
+            tz.cover_inverted,
+        ],
+        fromZigbee: [
+            fz.cover_inverted,
+        ],
         ota: true,
         configure: async (device, coordinatorEndpoint) => {
             const endpoint = device.getEndpoint(1);
